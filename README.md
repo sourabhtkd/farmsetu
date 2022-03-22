@@ -129,7 +129,7 @@ Running Test Cases
         }
       ]
     },
-     "seasons": {
+    "seasons": {
             "win": [
                 {
                     "2016": 3.67
@@ -150,6 +150,33 @@ Running Test Cases
 }
 ```
 
+##### year order response example (truncated)
+
+```json
+{
+  "order": "date",
+  "region": "Wales",
+  "parameter": "Tmin",
+  "data": {
+    "1884": {
+      "months": {
+        "jan": 3.6,
+        "feb": 1.9,
+        "mar": 2.2
+      },
+      "seasons": {
+                "win": null,
+                "spr": 3.28,
+                "sum": 9.79,
+                "aut": 6.12
+            },
+       "ann": 5.43
+    },
+    ....
+  }
+}
+
+```
 **Available parameter options**
 
 
