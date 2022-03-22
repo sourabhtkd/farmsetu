@@ -38,6 +38,8 @@
    - **Method** = POST
    - **Data** :-
 
+#####Rank ordered
+
 ```json
 {
     "order":"ranked",
@@ -45,7 +47,15 @@
     "parameter":"Tmin"
 }
 ```
-   - **Response **:
+##### Year Ordered
+
+```json
+{
+    "order":"date",
+    "region":"UK",
+    "parameter":"Tmin"
+}
+```
 
 Available parameter options
 
