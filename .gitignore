@@ -2,3 +2,5 @@ db.sqlite3
 web
 static
 */migrations/00*
+remove.sh
+restart.sh
