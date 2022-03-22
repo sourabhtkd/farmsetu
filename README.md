@@ -46,8 +46,11 @@ Data
     "parameter":"Tmin"
 }
 ```
+
 Available parameter options
+
 <div style="font-size:10px;">
+
 | order                |   region                                             |   parameter                |
 | ---------------------| ---------------------------------------------------- |----------------------------|
 | RANKED = 'ranked'    | UK = 'UK'                                            | Tmax = "Tmax"              |
