@@ -18,6 +18,11 @@
 - Static files are served within django itself not using any production grade services like S3
 - Assuming you won't run dev and prod containers at same time so volume names
   are kept same intentionally
+- Database is not used but postgresql is configured to port 5433 assuming you have 
+  postgresql installed in local system and running in default port 5432
+- prod env and dev env are same except DEBUG flag
+
+**Note: Authentication and Authorization was not required as per task hence not implemented
 
 
 **Steps**
