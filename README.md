@@ -27,6 +27,8 @@
 
 
 **Steps**
+**Db health check up is not added, in case build fails in prod conf then will have to restart
+containers without rebuilding it then it will work**
 
 ```shell
 ## for dev docker-compose 
@@ -51,6 +53,10 @@ Running Test Cases
 ```
 
 ##### Documentation url 
+
+**Swagger API is not implemented yet, if needed then will need extra time, as of now
+only sphinx documentation of functions are added**
+
 ```
 http//:localhost:8000/docs
 
