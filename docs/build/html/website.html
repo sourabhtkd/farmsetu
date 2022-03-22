@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>website package &mdash; Farmsetu 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="farmsetu package" href="farmsetu.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Farmsetu
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and API Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="farmsetu.html">farmsetu package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">website package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-website.serializers">website.serializers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-website.tests">website.tests module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-website.views">website.views module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#website-utils-climate-api-utils">website.utils.climate_api_utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-website">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Farmsetu</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>website package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/website.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="website-package">
+<h1>website package<a class="headerlink" href="#website-package" title="Permalink to this headline"></a></h1>
+<p><strong>documentation of admin.py and models.py are removed because they are not being used in the project</strong></p>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-website.serializers">
+<span id="website-serializers-module"></span><h2>website.serializers module<a class="headerlink" href="#module-website.serializers" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="website.serializers.ClimateApiSerializer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">website.serializers.</span></span><span class="sig-name descname"><span class="pre">ClimateApiSerializer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/serializers.html#ClimateApiSerializer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.serializers.ClimateApiSerializer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.serializers.Serializer</span></code></p>
+<p>Take input from user for meetoffice api</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="farmsetu.html#farmsetu.type_class.OrderType" title="farmsetu.type_class.OrderType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.OrderType</span></code></a>
+<a class="reference internal" href="farmsetu.html#farmsetu.type_class.RegionType" title="farmsetu.type_class.RegionType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.RegionType</span></code></a>
+<a class="reference internal" href="farmsetu.html#farmsetu.type_class.ParameterType" title="farmsetu.type_class.ParameterType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.ParameterType</span></code></a></p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="website.serializers.ClimateApiSerializer.order">
+<span class="sig-name descname"><span class="pre">order</span></span><a class="headerlink" href="#website.serializers.ClimateApiSerializer.order" title="Permalink to this definition"></a></dt>
+<dd><p>values from <a class="reference internal" href="farmsetu.html#farmsetu.type_class.OrderType" title="farmsetu.type_class.OrderType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.OrderType</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="website.serializers.ClimateApiSerializer.parameter">
+<span class="sig-name descname"><span class="pre">parameter</span></span><a class="headerlink" href="#website.serializers.ClimateApiSerializer.parameter" title="Permalink to this definition"></a></dt>
+<dd><p>values from <a class="reference internal" href="farmsetu.html#farmsetu.type_class.ParameterType" title="farmsetu.type_class.ParameterType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.ParameterType</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="website.serializers.ClimateApiSerializer.region">
+<span class="sig-name descname"><span class="pre">region</span></span><a class="headerlink" href="#website.serializers.ClimateApiSerializer.region" title="Permalink to this definition"></a></dt>
+<dd><p>values from <a class="reference internal" href="farmsetu.html#farmsetu.type_class.RegionType" title="farmsetu.type_class.RegionType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.RegionType</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-website.tests">
+<span id="website-tests-module"></span><h2>website.tests module<a class="headerlink" href="#module-website.tests" title="Permalink to this headline"></a></h2>
+<p>Test cases for the project</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only success test cases are covered due to lack of time</p>
+</div>
+<dl class="py class">
+<dt class="sig sig-object py" id="website.tests.BaseApiTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">website.tests.</span></span><span class="sig-name descname"><span class="pre">BaseApiTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/tests.html#BaseApiTestCase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.tests.BaseApiTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.test.APITestCase</span></code></p>
+<p>Contains most used functions in all test cases</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="website.tests.BaseApiTestCase.assertEqualsForTwoDicts">
+<span class="sig-name descname"><span class="pre">assertEqualsForTwoDicts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response_data_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_data_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/tests.html#BaseApiTestCase.assertEqualsForTwoDicts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.tests.BaseApiTestCase.assertEqualsForTwoDicts" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Params response_data_dict</dt>
+<dd class="field-odd"><p>response got after calling api</p>
+</dd>
+<dt class="field-even">Params expected_data_dict</dt>
+<dd class="field-even"><p>dict values we want to match for given dict</p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>  <span class="n">eg</span><span class="p">:</span><span class="o">-</span>
+  <span class="n">response_data</span><span class="p">{</span>
+   <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;vishal shekhar&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;age&quot;</span><span class="p">:</span><span class="mi">20</span>
+  <span class="p">}</span>
+
+  <span class="n">expected_data_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;aman saxena&quot;</span>
+  <span class="p">}</span>
+
+<span class="n">this</span> <span class="n">will</span> <span class="n">match</span> <span class="n">name</span> <span class="n">of</span> <span class="n">expected</span> <span class="n">data</span> <span class="k">with</span> <span class="n">name</span> <span class="n">key</span> <span class="n">of</span> <span class="n">response_data</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="website.tests.BaseApiTestCase.assertKeyListInDict">
+<span class="sig-name descname"><span class="pre">assertKeyListInDict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">response_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/tests.html#BaseApiTestCase.assertKeyListInDict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.tests.BaseApiTestCase.assertKeyListInDict" title="Permalink to this definition"></a></dt>
+<dd><p>checks if given list of keys exist in provided dictionary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Params response_dict</dt>
+<dd class="field-odd"><p>response dictionary</p>
+</dd>
+<dt class="field-even">Params key_list</dt>
+<dd class="field-even"><p>list of keys to assert</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="website.tests.ClimateBaseTestCase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">website.tests.</span></span><span class="sig-name descname"><span class="pre">ClimateBaseTestCase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/tests.html#ClimateBaseTestCase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.tests.ClimateBaseTestCase" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#website.tests.BaseApiTestCase" title="website.tests.BaseApiTestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">website.tests.BaseApiTestCase</span></code></a></p>
+<p>“</p>
+<p>Contains success test cases for meetoffice api</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="website.tests.ClimateBaseTestCase.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/tests.html#ClimateBaseTestCase.setUp"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.tests.ClimateBaseTestCase.setUp" title="Permalink to this definition"></a></dt>
+<dd><p>basic setup of url</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="website.tests.ClimateBaseTestCase.test_success_rank_ordered_data">
+<span class="sig-name descname"><span class="pre">test_success_rank_ordered_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/tests.html#ClimateBaseTestCase.test_success_rank_ordered_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.tests.ClimateBaseTestCase.test_success_rank_ordered_data" title="Permalink to this definition"></a></dt>
+<dd><p>test rank ordered data for each region and parameter</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="farmsetu.html#farmsetu.type_class.OrderType" title="farmsetu.type_class.OrderType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.OrderType</span></code></a>
+<a class="reference internal" href="farmsetu.html#farmsetu.type_class.RegionType" title="farmsetu.type_class.RegionType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.RegionType</span></code></a>
+<a class="reference internal" href="farmsetu.html#farmsetu.type_class.ParameterType" title="farmsetu.type_class.ParameterType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.ParameterType</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="website.tests.ClimateBaseTestCase.test_success_year_ordered_data">
+<span class="sig-name descname"><span class="pre">test_success_year_ordered_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/tests.html#ClimateBaseTestCase.test_success_year_ordered_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.tests.ClimateBaseTestCase.test_success_year_ordered_data" title="Permalink to this definition"></a></dt>
+<dd><p>test year ordered data for each region and parameter</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="farmsetu.html#farmsetu.type_class.OrderType" title="farmsetu.type_class.OrderType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.OrderType</span></code></a>
+<a class="reference internal" href="farmsetu.html#farmsetu.type_class.RegionType" title="farmsetu.type_class.RegionType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.RegionType</span></code></a>
+<a class="reference internal" href="farmsetu.html#farmsetu.type_class.ParameterType" title="farmsetu.type_class.ParameterType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.ParameterType</span></code></a></p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-website.views">
+<span id="website-views-module"></span><h2>website.views module<a class="headerlink" href="#module-website.views" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="website.views.MetOfficeView">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">website.views.</span></span><span class="sig-name descname"><span class="pre">MetOfficeView</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/views.html#MetOfficeView"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.views.MetOfficeView" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">rest_framework.views.APIView</span></code></p>
+<p>Calls MeetOffice api , parses data and returns it</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#website.serializers.ClimateApiSerializer" title="website.serializers.ClimateApiSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">website.serializers.ClimateApiSerializer</span></code></a></p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="website.views.MetOfficeView.post">
+<span class="sig-name descname"><span class="pre">post</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/views.html#MetOfficeView.post"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.views.MetOfficeView.post" title="Permalink to this definition"></a></dt>
+<dd><p>accepts post request, validates data , calls api and send formatted response</p>
+<p>For more details check <a class="reference external" href="https://github.com/sourabhtkd/farmsetu">https://github.com/sourabhtkd/farmsetu</a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="website.views.MetOfficeView.serializer_class">
+<span class="sig-name descname"><span class="pre">serializer_class</span></span><a class="headerlink" href="#website.views.MetOfficeView.serializer_class" title="Permalink to this definition"></a></dt>
+<dd><p>alias of <a class="reference internal" href="#website.serializers.ClimateApiSerializer" title="website.serializers.ClimateApiSerializer"><code class="xref py py-class docutils literal notranslate"><span class="pre">website.serializers.ClimateApiSerializer</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="website-utils-climate-api-utils">
+<h2>website.utils.climate_api_utils<a class="headerlink" href="#website-utils-climate-api-utils" title="Permalink to this headline"></a></h2>
+<span class="target" id="module-website.utils.climate_api_utils"></span><dl class="py class">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.ClimateApiUtil">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">website.utils.climate_api_utils.</span></span><span class="sig-name descname"><span class="pre">ClimateApiUtil</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ordering_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">region</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#ClimateApiUtil"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.ClimateApiUtil" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.ClimateApiUtil.get_climate_data">
+<span class="sig-name descname"><span class="pre">get_climate_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#ClimateApiUtil.get_climate_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.ClimateApiUtil.get_climate_data" title="Permalink to this definition"></a></dt>
+<dd><p>Forms url based on parameters and only calls api and returns climate api object.</p>
+<p>on success sets  _data and message and returns climate api object
+on failure sets errors(traceback for logging) and message then returns climate api object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.ClimateApiUtil.get_formatted_data">
+<span class="sig-name descname"><span class="pre">get_formatted_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#ClimateApiUtil.get_formatted_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.ClimateApiUtil.get_formatted_data" title="Permalink to this definition"></a></dt>
+<dd><p>Gets proper formatter based on order type and formats data</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.ClimateApiUtil.is_valid">
+<span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#ClimateApiUtil.is_valid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.ClimateApiUtil.is_valid" title="Permalink to this definition"></a></dt>
+<dd><p>will return true only if climate data api is fetched successfully.
+before returning true it will set __parser and parsed data in the
+current object</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.Formatter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">website.utils.climate_api_utils.</span></span><span class="sig-name descname"><span class="pre">Formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ordering_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#Formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.Formatter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.Formatter.format">
+<span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#Formatter.format"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.Formatter.format" title="Permalink to this definition"></a></dt>
+<dd><p>calls approriate formatter based on order type</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.Formatter.get_formatter">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_formatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ordering_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#Formatter.get_formatter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.Formatter.get_formatter" title="Permalink to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Params ordering_type</dt>
+<dd class="field-odd"><p>values from <a class="reference internal" href="farmsetu.html#farmsetu.type_class.OrderType" title="farmsetu.type_class.OrderType"><code class="xref py py-class docutils literal notranslate"><span class="pre">farmsetu.type_class.OrderType</span></code></a></p>
+</dd>
+</dl>
+<p>returns formatter object based on order type, implemented just for readability,
+in case different formatter classes are required those can be instantiated from here</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.Formatter.ordering_type">
+<span class="sig-name descname"><span class="pre">ordering_type</span></span><a class="headerlink" href="#website.utils.climate_api_utils.Formatter.ordering_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.Parser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">website.utils.climate_api_utils.</span></span><span class="sig-name descname"><span class="pre">Parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ordering_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#Parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.Parser" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Parses data based on order type</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.Parser.get_parser">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_parser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ordering_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#Parser.get_parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.Parser.get_parser" title="Permalink to this definition"></a></dt>
+<dd><p>returns parser object.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Parser object can be instantiated directly this is implemented just for
+readability or in case different Parser classes are meant to be instantiated
+based on parameters</p>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.Parser.ordering_type">
+<span class="sig-name descname"><span class="pre">ordering_type</span></span><a class="headerlink" href="#website.utils.climate_api_utils.Parser.ordering_type" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="website.utils.climate_api_utils.Parser.parse">
+<span class="sig-name descname"><span class="pre">parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/website/utils/climate_api_utils.html#Parser.parse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#website.utils.climate_api_utils.Parser.parse" title="Permalink to this definition"></a></dt>
+<dd><p>Calls appropriate parser based on order type</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-website">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-website" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="farmsetu.html" class="btn btn-neutral float-left" title="farmsetu package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, sourabh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

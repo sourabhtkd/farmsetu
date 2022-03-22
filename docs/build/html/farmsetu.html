@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>farmsetu package &mdash; Farmsetu 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="website package" href="website.html" />
+    <link rel="prev" title="Installation and API Details" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Farmsetu
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and API Details</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">farmsetu package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-farmsetu.constants">farmsetu.constants module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-farmsetu.core_lib">farmsetu.core_lib module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-farmsetu.exceptions">farmsetu.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-farmsetu.settings">farmsetu.settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-farmsetu.type_class">farmsetu.type_class module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="website.html">website package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Farmsetu</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>farmsetu package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/farmsetu.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="farmsetu-package">
+<h1>farmsetu package<a class="headerlink" href="#farmsetu-package" title="Permalink to this headline"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+</section>
+<section id="module-farmsetu.constants">
+<span id="farmsetu-constants-module"></span><h2>farmsetu.constants module<a class="headerlink" href="#module-farmsetu.constants" title="Permalink to this headline"></a></h2>
+<p>CONSTANTS FOR THIS PROJECT</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="farmsetu.constants.ANNUAL_CONSTANT">
+<span class="sig-prename descclassname"><span class="pre">farmsetu.constants.</span></span><span class="sig-name descname"><span class="pre">ANNUAL_CONSTANT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ann'</span></em><a class="headerlink" href="#farmsetu.constants.ANNUAL_CONSTANT" title="Permalink to this definition"></a></dt>
+<dd><p>object keys for annual data in meetoffice api</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="farmsetu.constants.API_RESULT_URL_FORMATTED">
+<span class="sig-prename descclassname"><span class="pre">farmsetu.constants.</span></span><span class="sig-name descname"><span class="pre">API_RESULT_URL_FORMATTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'{base_api_url}/{parameter}/{ordering_type}/{region}.txt'</span></em><a class="headerlink" href="#farmsetu.constants.API_RESULT_URL_FORMATTED" title="Permalink to this definition"></a></dt>
+<dd><p>replace parameters in this url to get meetoffice data</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="farmsetu.constants.BASE_API_URL">
+<span class="sig-prename descclassname"><span class="pre">farmsetu.constants.</span></span><span class="sig-name descname"><span class="pre">BASE_API_URL</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'https://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets'</span></em><a class="headerlink" href="#farmsetu.constants.BASE_API_URL" title="Permalink to this definition"></a></dt>
+<dd><p>base METOFFICE url</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="farmsetu.constants.SHORT_MONTH_CONSTANT_LIST">
+<span class="sig-prename descclassname"><span class="pre">farmsetu.constants.</span></span><span class="sig-name descname"><span class="pre">SHORT_MONTH_CONSTANT_LIST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['jan',</span> <span class="pre">'feb',</span> <span class="pre">'mar',</span> <span class="pre">'apr',</span> <span class="pre">'may',</span> <span class="pre">'jun',</span> <span class="pre">'jul',</span> <span class="pre">'aug',</span> <span class="pre">'sep',</span> <span class="pre">'oct',</span> <span class="pre">'nov',</span> <span class="pre">'dec']</span></em><a class="headerlink" href="#farmsetu.constants.SHORT_MONTH_CONSTANT_LIST" title="Permalink to this definition"></a></dt>
+<dd><p>key for monthly data in meetoffice api, ignoring convention of keeping constants in UpperCase here</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="farmsetu.constants.UK_SEASON_CONSTANT_LIST">
+<span class="sig-prename descclassname"><span class="pre">farmsetu.constants.</span></span><span class="sig-name descname"><span class="pre">UK_SEASON_CONSTANT_LIST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">['win',</span> <span class="pre">'spr',</span> <span class="pre">'sum',</span> <span class="pre">'aut']</span></em><a class="headerlink" href="#farmsetu.constants.UK_SEASON_CONSTANT_LIST" title="Permalink to this definition"></a></dt>
+<dd><p>objects keys for seasonwise data in meetoffice api</p>
+</dd></dl>
+
+</section>
+<section id="module-farmsetu.core_lib">
+<span id="farmsetu-core-lib-module"></span><h2>farmsetu.core_lib module<a class="headerlink" href="#module-farmsetu.core_lib" title="Permalink to this headline"></a></h2>
+<p>Core library functions which are expected to be used in all over the project
+eg:- Object ids, image related functions, s3 upload functions</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="farmsetu.core_lib.CoreUtils">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">farmsetu.core_lib.</span></span><span class="sig-name descname"><span class="pre">CoreUtils</span></span><a class="reference internal" href="_modules/farmsetu/core_lib.html#CoreUtils"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#farmsetu.core_lib.CoreUtils" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="farmsetu.core_lib.CoreUtils.get_bson_object_id">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_bson_object_id</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/farmsetu/core_lib.html#CoreUtils.get_bson_object_id"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#farmsetu.core_lib.CoreUtils.get_bson_object_id" title="Permalink to this definition"></a></dt>
+<dd><p>Bson object id for database(instead of default integer ids)</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-farmsetu.exceptions">
+<span id="farmsetu-exceptions-module"></span><h2>farmsetu.exceptions module<a class="headerlink" href="#module-farmsetu.exceptions" title="Permalink to this headline"></a></h2>
+<p>Custom Exception handler functions</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="farmsetu.exceptions.custom_exception_handler">
+<span class="sig-prename descclassname"><span class="pre">farmsetu.exceptions.</span></span><span class="sig-name descname"><span class="pre">custom_exception_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">context</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/farmsetu/exceptions.html#custom_exception_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#farmsetu.exceptions.custom_exception_handler" title="Permalink to this definition"></a></dt>
+<dd><p>Default exception handler so that api consumer will get uniform response in any condition</p>
+<p>If any exception is raised and response object exists then return otherwise
+create response object , set status code to 500 and then return.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This could have been implemented in better way like uniform response irrespective of
+what exception is thrown and logger could have been put here but this is just a
+demo project so no production grade methods are implemented</p>
+</div>
+</dd></dl>
+
+</section>
+<section id="module-farmsetu.settings">
+<span id="farmsetu-settings-module"></span><h2>farmsetu.settings module<a class="headerlink" href="#module-farmsetu.settings" title="Permalink to this headline"></a></h2>
+<p>Django settings for farmsetu project.</p>
+<p>Generated by ‘django-admin startproject’ using Django 4.0.3.</p>
+<p>For more information on this file, see
+<a class="reference external" href="https://docs.djangoproject.com/en/4.0/topics/settings/">https://docs.djangoproject.com/en/4.0/topics/settings/</a></p>
+<p>For the full list of settings and their values, see
+<a class="reference external" href="https://docs.djangoproject.com/en/4.0/ref/settings/">https://docs.djangoproject.com/en/4.0/ref/settings/</a></p>
+</section>
+<section id="module-farmsetu.type_class">
+<span id="farmsetu-type-class-module"></span><h2>farmsetu.type_class module<a class="headerlink" href="#module-farmsetu.type_class" title="Permalink to this headline"></a></h2>
+<p>This file contains choice fields of databases and forms, though it makes application a bit of tight coupled and is
+more relevant approach in monolithic applications but here we have only one application so this
+is fine</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="farmsetu.type_class.OrderType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">farmsetu.type_class.</span></span><span class="sig-name descname"><span class="pre">OrderType</span></span><a class="reference internal" href="_modules/farmsetu/type_class.html#OrderType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#farmsetu.type_class.OrderType" title="Permalink to this definition"></a></dt>
+<dd><p>options for order field in meetoffice api</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.OrderType.RANKED">
+<span class="sig-name descname"><span class="pre">RANKED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ranked'</span></em><a class="headerlink" href="#farmsetu.type_class.OrderType.RANKED" title="Permalink to this definition"></a></dt>
+<dd><p>to get rank ordered data from meetoffice api</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.OrderType.YEAR_ORDERED">
+<span class="sig-name descname"><span class="pre">YEAR_ORDERED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'date'</span></em><a class="headerlink" href="#farmsetu.type_class.OrderType.YEAR_ORDERED" title="Permalink to this definition"></a></dt>
+<dd><p>to get year ordered data from meetoffice api</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.OrderType.choices">
+<span class="sig-name descname"><span class="pre">choices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('ranked',</span> <span class="pre">'Ranked</span> <span class="pre">Ordered'),</span> <span class="pre">('date',</span> <span class="pre">'Year</span> <span class="pre">Ordered'))</span></em><a class="headerlink" href="#farmsetu.type_class.OrderType.choices" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="farmsetu.type_class.ParameterType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">farmsetu.type_class.</span></span><span class="sig-name descname"><span class="pre">ParameterType</span></span><a class="reference internal" href="_modules/farmsetu/type_class.html#ParameterType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#farmsetu.type_class.ParameterType" title="Permalink to this definition"></a></dt>
+<dd><p>options for parameter field in MetOffice api</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.ParameterType.AirFrost">
+<span class="sig-name descname"><span class="pre">AirFrost</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'AirFrost'</span></em><a class="headerlink" href="#farmsetu.type_class.ParameterType.AirFrost" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.ParameterType.Raindays1mm">
+<span class="sig-name descname"><span class="pre">Raindays1mm</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Raindays1mm'</span></em><a class="headerlink" href="#farmsetu.type_class.ParameterType.Raindays1mm" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.ParameterType.Rainfall">
+<span class="sig-name descname"><span class="pre">Rainfall</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Rainfall'</span></em><a class="headerlink" href="#farmsetu.type_class.ParameterType.Rainfall" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.ParameterType.Sunshine">
+<span class="sig-name descname"><span class="pre">Sunshine</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Sunshine'</span></em><a class="headerlink" href="#farmsetu.type_class.ParameterType.Sunshine" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.ParameterType.Tmax">
+<span class="sig-name descname"><span class="pre">Tmax</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Tmax'</span></em><a class="headerlink" href="#farmsetu.type_class.ParameterType.Tmax" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.ParameterType.Tmean">
+<span class="sig-name descname"><span class="pre">Tmean</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Tmean'</span></em><a class="headerlink" href="#farmsetu.type_class.ParameterType.Tmean" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.ParameterType.Tmin">
+<span class="sig-name descname"><span class="pre">Tmin</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Tmin'</span></em><a class="headerlink" href="#farmsetu.type_class.ParameterType.Tmin" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.ParameterType.choices">
+<span class="sig-name descname"><span class="pre">choices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('Tmax',</span> <span class="pre">'Tmax'),</span> <span class="pre">('Tmin',</span> <span class="pre">'Tmin'),</span> <span class="pre">('Tmean',</span> <span class="pre">'Tmean'),</span> <span class="pre">('Sunshine',</span> <span class="pre">'Sunshine'),</span> <span class="pre">('Rainfall',</span> <span class="pre">'Rainfall'),</span> <span class="pre">('Raindays1mm',</span> <span class="pre">'Raindays1mm'),</span> <span class="pre">('AirFrost',</span> <span class="pre">'AirFrost'))</span></em><a class="headerlink" href="#farmsetu.type_class.ParameterType.choices" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">farmsetu.type_class.</span></span><span class="sig-name descname"><span class="pre">RegionType</span></span><a class="reference internal" href="_modules/farmsetu/type_class.html#RegionType"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#farmsetu.type_class.RegionType" title="Permalink to this definition"></a></dt>
+<dd><p>Options for region field in MetOfficeView api,</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We could have stored regions in database but this parameter will be
+rarely changed so putting these values as choice field makes good choice</p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.East_Anglia">
+<span class="sig-name descname"><span class="pre">East_Anglia</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'East_Anglia'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.East_Anglia" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.England">
+<span class="sig-name descname"><span class="pre">England</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'England'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.England" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.England_E_and_NE">
+<span class="sig-name descname"><span class="pre">England_E_and_NE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'England_E_and_NE'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.England_E_and_NE" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.England_N">
+<span class="sig-name descname"><span class="pre">England_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'England_N'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.England_N" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.England_NW_and_N_Wales">
+<span class="sig-name descname"><span class="pre">England_NW_and_N_Wales</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'England_NW_and_N_Wales'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.England_NW_and_N_Wales" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.England_S">
+<span class="sig-name descname"><span class="pre">England_S</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'England_S'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.England_S" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.England_SE_and_Central_S">
+<span class="sig-name descname"><span class="pre">England_SE_and_Central_S</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'England_SE_and_Central_S'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.England_SE_and_Central_S" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.England_SW_and_S_Wales">
+<span class="sig-name descname"><span class="pre">England_SW_and_S_Wales</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'England_SW_and_S_Wales'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.England_SW_and_S_Wales" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.England_and_Wales">
+<span class="sig-name descname"><span class="pre">England_and_Wales</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'England_and_Wales'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.England_and_Wales" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.Midlands">
+<span class="sig-name descname"><span class="pre">Midlands</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Midlands'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.Midlands" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.Northern_Ireland">
+<span class="sig-name descname"><span class="pre">Northern_Ireland</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Northern_Ireland'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.Northern_Ireland" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.Scotland">
+<span class="sig-name descname"><span class="pre">Scotland</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Scotland'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.Scotland" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.Scotland_E">
+<span class="sig-name descname"><span class="pre">Scotland_E</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Scotland_E'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.Scotland_E" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.Scotland_N">
+<span class="sig-name descname"><span class="pre">Scotland_N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Scotland_N'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.Scotland_N" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.Scotland_W">
+<span class="sig-name descname"><span class="pre">Scotland_W</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Scotland_W'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.Scotland_W" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.UK">
+<span class="sig-name descname"><span class="pre">UK</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'UK'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.UK" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.Wales">
+<span class="sig-name descname"><span class="pre">Wales</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Wales'</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.Wales" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="farmsetu.type_class.RegionType.choices">
+<span class="sig-name descname"><span class="pre">choices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(('UK',</span> <span class="pre">'UK'),</span> <span class="pre">('England',</span> <span class="pre">'England'),</span> <span class="pre">('Wales',</span> <span class="pre">'Wales'),</span> <span class="pre">('Scotland',</span> <span class="pre">'Scotland'),</span> <span class="pre">('Northern_Ireland',</span> <span class="pre">'Northern_Ireland'),</span> <span class="pre">('England_and_Wales',</span> <span class="pre">'England</span> <span class="pre">And</span> <span class="pre">Wales'),</span> <span class="pre">('England_N',</span> <span class="pre">'England</span> <span class="pre">N'),</span> <span class="pre">('England_S',</span> <span class="pre">'England_S'),</span> <span class="pre">('Scotland_N',</span> <span class="pre">'Scotland_N'),</span> <span class="pre">('Scotland_E',</span> <span class="pre">'Scotland_E'),</span> <span class="pre">('Scotland_W',</span> <span class="pre">'Scotland_W'),</span> <span class="pre">('England_E_and_NE',</span> <span class="pre">'England_E_and_NE'),</span> <span class="pre">('England_NW_and_N_Wales',</span> <span class="pre">'England_NW_and_N_Wales'),</span> <span class="pre">('Midlands',</span> <span class="pre">'Midlands'),</span> <span class="pre">('East_Anglia',</span> <span class="pre">'East_Anglia'),</span> <span class="pre">('England_SW_and_S_Wales',</span> <span class="pre">'England_SW_and_S_Wales'),</span> <span class="pre">('England_SE_and_Central_S',</span> <span class="pre">'England_SE_and_Central_S'))</span></em><a class="headerlink" href="#farmsetu.type_class.RegionType.choices" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation and API Details" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="website.html" class="btn btn-neutral float-right" title="website package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, sourabh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

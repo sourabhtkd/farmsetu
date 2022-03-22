@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>farmsetu.type_class &mdash; Farmsetu 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Farmsetu
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation and API Details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../farmsetu.html">farmsetu package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../website.html">website package</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Farmsetu</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      <li>farmsetu.type_class</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for farmsetu.type_class</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This file contains choice fields of databases and forms, though it makes application a bit of tight coupled and is</span>
+<span class="sd">more relevant approach in monolithic applications but here we have only one application so this</span>
+<span class="sd">is fine</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+
+<div class="viewcode-block" id="OrderType"><a class="viewcode-back" href="../../farmsetu.html#farmsetu.type_class.OrderType">[docs]</a><span class="k">class</span> <span class="nc">OrderType</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    options for order field in meetoffice api</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1">#: to get rank ordered data from meetoffice api</span>
+    <span class="n">RANKED</span> <span class="o">=</span> <span class="s1">&#39;ranked&#39;</span>
+    <span class="c1">#: to get year ordered data from meetoffice api</span>
+    <span class="n">YEAR_ORDERED</span> <span class="o">=</span> <span class="s1">&#39;date&#39;</span>
+
+    <span class="n">choices</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">RANKED</span><span class="p">,</span> <span class="s1">&#39;Ranked Ordered&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">YEAR_ORDERED</span><span class="p">,</span> <span class="s1">&#39;Year Ordered&#39;</span><span class="p">)</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RegionType"><a class="viewcode-back" href="../../farmsetu.html#farmsetu.type_class.RegionType">[docs]</a><span class="k">class</span> <span class="nc">RegionType</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Options for region field in MetOfficeView api,</span>
+
+<span class="sd">    .. note::</span>
+<span class="sd">       We could have stored regions in database but this parameter will be</span>
+<span class="sd">       rarely changed so putting these values as choice field makes good choice</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">UK</span> <span class="o">=</span> <span class="s1">&#39;UK&#39;</span>
+    <span class="n">England</span> <span class="o">=</span> <span class="s1">&#39;England&#39;</span>
+    <span class="n">Wales</span> <span class="o">=</span> <span class="s1">&#39;Wales&#39;</span>
+    <span class="n">Scotland</span> <span class="o">=</span> <span class="s1">&#39;Scotland&#39;</span>
+    <span class="n">Northern_Ireland</span> <span class="o">=</span> <span class="s1">&#39;Northern_Ireland&#39;</span>
+    <span class="n">England_and_Wales</span> <span class="o">=</span> <span class="s1">&#39;England_and_Wales&#39;</span>
+    <span class="n">England_N</span> <span class="o">=</span> <span class="s1">&#39;England_N&#39;</span>
+    <span class="n">England_S</span> <span class="o">=</span> <span class="s1">&#39;England_S&#39;</span>
+    <span class="n">Scotland_N</span> <span class="o">=</span> <span class="s1">&#39;Scotland_N&#39;</span>
+    <span class="n">Scotland_E</span> <span class="o">=</span> <span class="s1">&#39;Scotland_E&#39;</span>
+    <span class="n">Scotland_W</span> <span class="o">=</span> <span class="s1">&#39;Scotland_W&#39;</span>
+    <span class="n">England_E_and_NE</span> <span class="o">=</span> <span class="s1">&#39;England_E_and_NE&#39;</span>
+    <span class="n">England_NW_and_N_Wales</span> <span class="o">=</span> <span class="s1">&#39;England_NW_and_N_Wales&#39;</span>
+    <span class="n">Midlands</span> <span class="o">=</span> <span class="s1">&#39;Midlands&#39;</span>
+    <span class="n">East_Anglia</span> <span class="o">=</span> <span class="s1">&#39;East_Anglia&#39;</span>
+    <span class="n">England_SW_and_S_Wales</span> <span class="o">=</span> <span class="s1">&#39;England_SW_and_S_Wales&#39;</span>
+    <span class="n">England_SE_and_Central_S</span> <span class="o">=</span> <span class="s1">&#39;England_SE_and_Central_S&#39;</span>
+
+    <span class="n">choices</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">UK</span><span class="p">,</span> <span class="s1">&#39;UK&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">England</span><span class="p">,</span> <span class="s1">&#39;England&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Wales</span><span class="p">,</span> <span class="s1">&#39;Wales&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Scotland</span><span class="p">,</span> <span class="s1">&#39;Scotland&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Northern_Ireland</span><span class="p">,</span> <span class="s1">&#39;Northern_Ireland&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">England_and_Wales</span><span class="p">,</span> <span class="s1">&#39;England And Wales&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">England_N</span><span class="p">,</span> <span class="s1">&#39;England N&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">England_S</span><span class="p">,</span> <span class="s1">&#39;England_S&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Scotland_N</span><span class="p">,</span> <span class="s1">&#39;Scotland_N&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Scotland_E</span><span class="p">,</span> <span class="s1">&#39;Scotland_E&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Scotland_W</span><span class="p">,</span> <span class="s1">&#39;Scotland_W&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">England_E_and_NE</span><span class="p">,</span> <span class="s1">&#39;England_E_and_NE&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">England_NW_and_N_Wales</span><span class="p">,</span> <span class="s1">&#39;England_NW_and_N_Wales&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Midlands</span><span class="p">,</span> <span class="s1">&#39;Midlands&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">East_Anglia</span><span class="p">,</span> <span class="s1">&#39;East_Anglia&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">England_SW_and_S_Wales</span><span class="p">,</span> <span class="s1">&#39;England_SW_and_S_Wales&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">England_SE_and_Central_S</span><span class="p">,</span> <span class="s1">&#39;England_SE_and_Central_S&#39;</span><span class="p">),</span>
+    <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ParameterType"><a class="viewcode-back" href="../../farmsetu.html#farmsetu.type_class.ParameterType">[docs]</a><span class="k">class</span> <span class="nc">ParameterType</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    options for parameter field in MetOffice api</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">Tmax</span> <span class="o">=</span> <span class="s2">&quot;Tmax&quot;</span>
+    <span class="n">Tmin</span> <span class="o">=</span> <span class="s1">&#39;Tmin&#39;</span>
+    <span class="n">Tmean</span> <span class="o">=</span> <span class="s1">&#39;Tmean&#39;</span>
+    <span class="n">Sunshine</span> <span class="o">=</span> <span class="s1">&#39;Sunshine&#39;</span>
+    <span class="n">Rainfall</span> <span class="o">=</span> <span class="s1">&#39;Rainfall&#39;</span>
+    <span class="n">Raindays1mm</span> <span class="o">=</span> <span class="s1">&#39;Raindays1mm&#39;</span>
+    <span class="n">AirFrost</span> <span class="o">=</span> <span class="s1">&#39;AirFrost&#39;</span>
+
+    <span class="n">choices</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="p">(</span><span class="n">Tmax</span><span class="p">,</span> <span class="s1">&#39;Tmax&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Tmin</span><span class="p">,</span> <span class="s1">&#39;Tmin&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Tmean</span><span class="p">,</span> <span class="s1">&#39;Tmean&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Sunshine</span><span class="p">,</span> <span class="s1">&#39;Sunshine&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Rainfall</span><span class="p">,</span> <span class="s1">&#39;Rainfall&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">Raindays1mm</span><span class="p">,</span> <span class="s1">&#39;Raindays1mm&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="n">AirFrost</span><span class="p">,</span> <span class="s1">&#39;AirFrost&#39;</span><span class="p">),</span>
+    <span class="p">)</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, sourabh.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
