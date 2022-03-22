@@ -21,6 +21,7 @@
 - Database is not used but postgresql is configured to port 5433 assuming you have 
   postgresql installed in local system and running in default port 5432
 - prod env and dev env are same except DEBUG flag
+- Logging is not enabled 
 
 **Note**: Authentication and Authorization was not required as per task hence not implemented
 
@@ -36,6 +37,7 @@
 ~$ docker-compose up -f docker-compose-prod.yml up
 ~$ docker-compose -f docker-compose-prod.yml exec web sh
 
+# migrate commands are not automated because sometimes you may need to enter default values for existing fields eg:- timezone.now
 ~$ python manage.py makemigrations
 ~$ python manage.py migrate
 ~$ python manage.py collectstatic --no-input

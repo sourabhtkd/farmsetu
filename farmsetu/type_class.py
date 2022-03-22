@@ -1,5 +1,18 @@
+"""
+This file contains choice fields of databases and forms, though it makes application a bit of tight coupled and is
+more relevant approach in monolithic applications but here we have only one application so this
+is fine
+
+"""
+
+
 class OrderType:
+    """
+    options for order field in meetoffice api
+    """
+    #: to get rank ordered data from meetoffice api
     RANKED = 'ranked'
+    #: to get year ordered data from meetoffice api
     YEAR_ORDERED = 'date'
 
     choices = (
@@ -10,8 +23,11 @@ class OrderType:
 
 class RegionType:
     """
-    As per convention all constants should be uppercase but due to time limitation
-    avoiding convention
+    Options for region field in MetOfficeView api,
+
+    .. note::
+       We could have stored regions in database but this parameter will be
+       rarely changed so putting these values as choice field makes good choice
 
     """
     UK = 'UK'
@@ -55,8 +71,7 @@ class RegionType:
 
 class ParameterType:
     """
-    As per convention all constants should be uppercase but due to time limitation
-    avoiding convention
+    options for parameter field in MetOffice api
 
     """
 
@@ -77,7 +92,3 @@ class ParameterType:
         (Raindays1mm, 'Raindays1mm'),
         (AirFrost, 'AirFrost'),
     )
-
-
-class Month:
-    JAN = 'jan'

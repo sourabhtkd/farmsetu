@@ -20,11 +20,21 @@ class Parser:
     @staticmethod
     def get_parser(ordering_type):
         """
-        returns parser object
+        returns parser object.
+
+        .. note::
+           Parser object can be instantiated directly this is implemented just for
+           readability or in case different Parser classes are meant to be instantiated
+           based on parameters
+
         """
         return Parser(ordering_type)
 
     def __parse_year_ordered_data(self, data):
+        """
+        Parses year ordered data
+
+        """
         result_list = list()
         row_list = data.splitlines()[5:]
         field_list = row_list.pop(0)
@@ -69,6 +79,10 @@ class Parser:
         return result_list
 
     def parse(self, data):
+        """
+        Calls appropriate parser based on order type
+
+        """
         func_dict = {
             OrderType.YEAR_ORDERED: self.__parse_year_ordered_data,
             OrderType.RANKED: self.__parse_rank_ordered_data,
@@ -86,11 +100,18 @@ class Formatter:
     @staticmethod
     def get_formatter(ordering_type):
         """
-        returns formatter object
+        :params ordering_type: values from :class:`farmsetu.type_class.OrderType`
+        returns formatter object based on order type, implemented just for readability,
+        in case different formatter classes are required those can be instantiated from here
+
         """
         return Formatter(ordering_type)
 
     def format(self, data):
+        """
+        calls approriate formatter based on order type
+
+        """
         func_dict = {
             OrderType.YEAR_ORDERED: self.__format_year_ordered_data,
             OrderType.RANKED: self.__format_rank_ordered_data,
@@ -99,6 +120,10 @@ class Formatter:
         return callable_func(data)
 
     def __format_year_ordered_data(self, data_list):
+        """
+        Formats year ordered data
+
+        """
         result = dict()
 
         for data in data_list:

@@ -3,15 +3,18 @@ from farmsetu.type_class import *
 
 
 class ClimateApiSerializer(serializers.Serializer):
+    """
+    Take input from user for meetoffice api
+
+    .. seealso::
+
+       :class:`farmsetu.type_class.OrderType`
+       :class:`farmsetu.type_class.RegionType`
+       :class:`farmsetu.type_class.ParameterType`
+    """
+    #: values from :class:`farmsetu.type_class.OrderType`
     order = serializers.ChoiceField(choices=OrderType.choices)
+    #: values from :class:`farmsetu.type_class.RegionType`
     region = serializers.ChoiceField(choices=RegionType.choices)
+    #: values from :class:`farmsetu.type_class.ParameterType`
     parameter = serializers.ChoiceField(choices=ParameterType.choices)
-
-    def save(self, **kwargs):
-        super().save()
-
-    def create(self, validated_data):
-        super(ClimateApiSerializer, self).create(**validated_data)
-
-    def update(self, instance, validated_data):
-        super(ClimateApiSerializer, self).update(*instance, **validated_data)

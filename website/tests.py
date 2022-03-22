@@ -1,31 +1,35 @@
-from rest_framework.test import APITestCase
+"""
+Test cases for the project
 
+.. note::
+   Only success test cases are covered due to lack of time
+
+"""
+from rest_framework.test import APITestCase
 from farmsetu.type_class import RegionType, ParameterType, OrderType
 
 
 class BaseApiTestCase(APITestCase):
+    """
+    Contains most used functions in all test cases
 
-    # def setUp(self) -> None:
-    #     self.app = Application.objects.create(
-    #         client_type=Application.CLIENT_CONFIDENTIAL,
-    #         authorization_grant_type=Application.GRANT_PASSWORD,
-    #         redirect_uris='',
-    #         name='test'
-    #     )
-
+    """
     def assertEqualsForTwoDicts(self, response_data_dict, expected_data_dict):
         """
-         response_data_dict: response got after calling api
-         expected_data_dict: Values we want to match
-         eg:
-          response_data{
+         :params response_data_dict: response got after calling api
+         :params expected_data_dict: dict values we want to match for given dict
+
+         .. code-block:: python
+
+            eg:-
+            response_data{
              "name":"vishal shekhar",
              "age":20
-          }
+            }
 
-          expected_data_dict = {
-             "name":"aman saxena"
-          }
+            expected_data_dict = {
+              "name":"aman saxena"
+            }
 
           this will match name of expected data with name key of response_data
         """
@@ -48,6 +52,10 @@ class BaseApiTestCase(APITestCase):
     def assertKeyListInDict(self, response_dict, key_list):
         """
         checks if given list of keys exist in provided dictionary
+
+        :params response_dict: response dictionary
+        :params key_list: list of keys to assert
+
         """
         if not key_list or type(key_list) is not list:
             raise Exception('Expected key_list as list but got {}'.format(type(key_list)))
@@ -60,13 +68,30 @@ class BaseApiTestCase(APITestCase):
 
 
 class ClimateBaseTestCase(BaseApiTestCase):
+    """"
+
+    Contains success test cases for meetoffice api
+
+    """
 
     def setUp(self):
+        """
+        basic setup of url
+        """
         self.url = "http://localhost:8000/"
         self.regions = [c[0] for c in RegionType.choices]
         self.parameters = [p[0] for p in ParameterType.choices]
 
     def test_success_rank_ordered_data(self):
+        """
+        test rank ordered data for each region and parameter
+
+        .. seealso::
+           :class:`farmsetu.type_class.OrderType`
+           :class:`farmsetu.type_class.RegionType`
+           :class:`farmsetu.type_class.ParameterType`
+
+        """
         payload = dict()
         payload["order"] = OrderType.RANKED
 
@@ -107,6 +132,15 @@ class ClimateBaseTestCase(BaseApiTestCase):
                     self.assertEqual(type(data), dict)
 
     def test_success_year_ordered_data(self):
+        """
+            test year ordered data for each region and parameter
+
+            .. seealso::
+               :class:`farmsetu.type_class.OrderType`
+               :class:`farmsetu.type_class.RegionType`
+               :class:`farmsetu.type_class.ParameterType`
+
+            """
         payload = dict()
         payload["order"] = OrderType.YEAR_ORDERED
 
@@ -127,7 +161,7 @@ class ClimateBaseTestCase(BaseApiTestCase):
                 self.assertKeyListInDict(json_response, ['order', 'region', 'parameter', 'data'])
 
                 data = json_response['data']
-                self.assertEqual(type(data),dict)
+                self.assertEqual(type(data), dict)
 
                 for year, value in data.items():
                     # in wrong data Valuerror should be raised

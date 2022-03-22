@@ -15,9 +15,23 @@ from website.utils.climate_api_utils import ClimateApiUtil
 
 
 class MetOfficeView(APIView):
+    """
+    Calls MeetOffice api , parses data and returns it
+
+    .. seealso::
+
+       :class:`website.serializers.ClimateApiSerializer`
+
+    """
     serializer_class = website_serializers.ClimateApiSerializer
 
     def post(self, request, *args, **kwargs):
+        """
+        accepts post request, validates data , calls api and send formatted response
+
+        For more details check https://github.com/sourabhtkd/farmsetu
+
+        """
         serializer = website_serializers.ClimateApiSerializer(data=request.data)
         if serializer.is_valid():
             order = serializer.validated_data['order']
