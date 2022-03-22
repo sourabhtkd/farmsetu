@@ -32,8 +32,10 @@
 ```
 
 ### API
-URL = http://localhost:8000/
-Method = POST
+
+1. Get Climate Data
+   - URL = http://localhost:8000/
+   - Method = POST
 
 Data
 
@@ -45,40 +47,25 @@ Data
 }
 ```
 Available parameter options
-```
-order
---------
-RANKED = 'ranked'
-YEAR_ORDERED = 'date'
 
-region
-----------
-UK = 'UK'
-    England = 'England'
-    Wales = 'Wales'
-    Scotland = 'Scotland'
-    Northern_Ireland = 'Northern_Ireland'
-    England_and_Wales = 'England_and_Wales'
-    England_N = 'England_N'
-    England_S = 'England_S'
-    Scotland_N = 'Scotland_N'
-    Scotland_E = 'Scotland_E'
-    Scotland_W = 'Scotland_W'
-    England_E_and_NE = 'England_E_and_NE'
-    England_NW_and_N_Wales = 'England_NW_and_N_Wales'
-    Midlands = 'Midlands'
-    East_Anglia = 'East_Anglia'
-    England_SW_and_S_Wales = 'England_SW_and_S_Wales'
-    England_SE_and_Central_S = 'England_SE_and_Central_S'
+| order                |   region                                               |   parameter                 |
+| ---------------------| ----------------------------------------------------   |-----------------------------|
+| RANKED = 'ranked'    |  UK = 'UK'                                             | Tmax = "Tmax"               |
+| YEAR_ORDERED = 'date'|  England = 'England'                                   | Tmin = 'Tmin'               |
+|                         Wales = 'Wales'                                       | Tmean = 'Tmean'             |
+|                         Scotland = 'Scotland'                                 | Sunshine = 'Sunshine'       |
+|                         Northern_Ireland = 'Northern_Ireland'                 | Rainfall = 'Rainfall'       |
+|                         England_and_Wales = 'England_and_Wales'               | Raindays1mm = 'Raindays1mm' |
+|                         England_N = 'England_N'                               | AirFrost = 'AirFrost'       |
+|                         England_S = 'England_S'                               |
+|                         Scotland_N = 'Scotland_N'                             |
+|                         Scotland_E = 'Scotland_E'                             |
+|                         Scotland_W = 'Scotland_W'                             |
+|                         England_E_and_NE = 'England_E_and_NE'                 |
+|                         England_NW_and_N_Wales = 'England_NW_and_N_Wales'     |
+|                         Midlands = 'Midlands'                                 |
+|                         East_Anglia = 'East_Anglia'                           |
+|                         England_SW_and_S_Wales = 'England_SW_and_S_Wales'     |
+|                         England_SE_and_Central_S = 'England_SE_and_Central_S' |
 
-parameter
------------------------
-    Tmax = "Tmax"
-    Tmin = 'Tmin'
-    Tmean = 'Tmean'
-    Sunshine = 'Sunshine'
-    Rainfall = 'Rainfall'
-    Raindays1mm = 'Raindays1mm'
-    AirFrost = 'AirFrost'
- 
-```
+
