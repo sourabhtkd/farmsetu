@@ -1,6 +1,14 @@
 db.sqlite3
+*.pyc
+.idea
+*.log
+*.swp
+*.orig
 web
+db_check.sh
 static
 */migrations/00*
 remove.sh
 restart.sh
+
+**/__pycache__
