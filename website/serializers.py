@@ -3,7 +3,7 @@ from farmsetu.type_class import *
 
 
 class ClimateApiSerializer(serializers.Serializer):
-    order = serializers.ChoiceField(choices=OrderingType.choices)
+    order = serializers.ChoiceField(choices=OrderType.choices)
     region = serializers.ChoiceField(choices=RegionType.choices)
     parameter = serializers.ChoiceField(choices=ParameterType.choices)
 

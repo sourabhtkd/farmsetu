@@ -28,12 +28,24 @@
 **Steps**
 
 ```shell
+## for dev docker-compose 
 ~$ docker-compose up -f docker-compose-dev.yml up
 ~$ docker-compose -f docker-compose-dev.yml exec web sh
+
+## for prod docker-compose
+~$ docker-compose up -f docker-compose-prod.yml up
+~$ docker-compose -f docker-compose-prod.yml exec web sh
+
 ~$ python manage.py makemigrations
 ~$ python manage.py migrate
 ~$ python manage.py collectstatic --no-input
 
+```
+Running Test Cases
+
+```shell
+~$ docker-compose -f docker-compose-dev.yml exec web python manage.py test
+~$ docker-compose -f docker-compose-prod.yml exec web python manage.py test
 ```
 
 ### API
@@ -60,6 +72,33 @@
     "region":"UK",
     "parameter":"Tmin"
 }
+```
+
+**Field Level errors**
+
+```json
+{
+    "errors": {
+        "order": [
+            "This field may not be null."
+        ],
+        "region": [
+            "This field may not be null."
+        ],
+        "parameter": [
+            "This field may not be null."
+        ]
+    }
+}
+```
+
+**Top level errors**
+```json
+{
+    "errors": "Error while fetching data from climate api"
+}
+
+
 ```
 
 **Available parameter options**

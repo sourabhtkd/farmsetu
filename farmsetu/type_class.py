@@ -1,4 +1,4 @@
-class OrderingType:
+class OrderType:
     RANKED = 'ranked'
     YEAR_ORDERED = 'date'
 

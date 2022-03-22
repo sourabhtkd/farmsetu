@@ -1,12 +1,17 @@
+from rest_framework.test import APITestCase
+
+from farmsetu.type_class import RegionType, ParameterType, OrderType
+
+
 class BaseApiTestCase(APITestCase):
 
-    def setUp(self) -> None:
-        self.app = Application.objects.create(
-            client_type=Application.CLIENT_CONFIDENTIAL,
-            authorization_grant_type=Application.GRANT_PASSWORD,
-            redirect_uris='',
-            name='test'
-        )
+    # def setUp(self) -> None:
+    #     self.app = Application.objects.create(
+    #         client_type=Application.CLIENT_CONFIDENTIAL,
+    #         authorization_grant_type=Application.GRANT_PASSWORD,
+    #         redirect_uris='',
+    #         name='test'
+    #     )
 
     def assertEqualsForTwoDicts(self, response_data_dict, expected_data_dict):
         """
@@ -53,3 +58,80 @@ class BaseApiTestCase(APITestCase):
         for key in key_list:
             self.assertIn(key, response_dict)
 
+
+class ClimateBaseTestCase(BaseApiTestCase):
+
+    def setUp(self):
+        self.url = "http://localhost:8000/"
+        self.regions = [c[0] for c in RegionType.choices]
+        self.parameters = [p[0] for p in ParameterType.choices]
+
+    def test_success_rank_ordered_data(self):
+        payload = dict()
+        payload["order"] = OrderType.RANKED
+
+        for region in self.regions:
+            for parameter in self.parameters:
+                payload['region'] = region
+                payload['parameter'] = parameter
+                headers = {
+                    "Content-Type": "Application/json",
+                    "Accept": "Application/json",
+                }
+                print("calling {}".format(payload))
+                response = self.client.post(self.url, data=payload, headers=headers)
+                self.assertEqual(response.status_code, 200)
+
+                json_response = response.json()
+
+                self.assertKeyListInDict(json_response, ['order', 'region', 'parameter', 'data'])
+                self.assertKeyListInDict(json_response['data'], ['months', 'seasons', 'ann'])
+
+                month_data = json_response['data']['months']
+                self.assertEqual(type(month_data), dict)
+                for month, v in month_data.items():
+                    self.assertEqual(type(v), list)
+                    for value in v:
+                        self.assertEqual(type(value), dict)
+
+                season_data = json_response['data']['seasons']
+                self.assertEqual(type(season_data), dict)
+                for season, v in season_data.items():
+                    self.assertEqual(type(v), list)
+                    for value in v:
+                        self.assertEqual(type(value), dict)
+
+                annual_data = json_response['data']['ann']
+                self.assertEqual(type(annual_data), list)
+                for data in annual_data:
+                    self.assertEqual(type(data), dict)
+
+    def test_success_year_ordered_data(self):
+        payload = dict()
+        payload["order"] = OrderType.YEAR_ORDERED
+
+        for region in self.regions:
+            for parameter in self.parameters:
+                payload['region'] = region
+                payload['parameter'] = parameter
+                headers = {
+                    "Content-Type": "Application/json",
+                    "Accept": "Application/json",
+                }
+                print("calling {}".format(payload))
+                response = self.client.post(self.url, data=payload, headers=headers)
+                self.assertEqual(response.status_code, 200)
+
+                json_response = response.json()
+
+                self.assertKeyListInDict(json_response, ['order', 'region', 'parameter', 'data'])
+
+                data = json_response['data']
+                self.assertEqual(type(data),dict)
+
+                for year, value in data.items():
+                    # in wrong data Valuerror should be raised
+                    self.assertEqual(type(int(year)), int)
+                    self.assertEqual(len(year), 4)
+
+                    self.assertEqual(type(value), dict)

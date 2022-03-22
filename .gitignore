@@ -6,7 +6,8 @@ db.sqlite3
 *.orig
 web
 db_check.sh
-static
+media/*
+static/*
 */migrations/00*
 remove.sh
 restart.sh

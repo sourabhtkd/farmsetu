@@ -16,31 +16,6 @@ from website.utils.climate_api_utils import ClimateApiUtil
 class MetOfficeView(APIView):
     serializer_class = website_serializers.ClimateApiSerializer
 
-    def get(self, request, *args, **kwargs):
-        # url = "https://www.metoffice.gov.uk/pub/data/weather/uk/climate/datasets/Sunshine/date/East_Anglia.txt"
-        # result = requests.get(url, headers={'Accept': "application/json"})
-        # text_data = result.text
-        # result_list = list()
-        # row_list = text_data.splitlines()[5:]
-        # # print(row_list)
-        # field_list = row_list.pop(0)
-        # # print(field_list)
-        # column_list = [f.strip() for f in field_list.split(' ') if f.strip() != ""]
-        #
-        # i = 0
-        # for row in row_list:
-        #     row_values = [r.strip() for r in row.split(' ') if r.strip() != ""]
-        #     result = dict(zip(column_list, row_values))
-        #     if len(result) >= 12 and i == 0:
-        #         data_list = row_values[1:13]
-        #         data_list = [float(d) for d in data_list]
-        #         print(sum(data_list))
-        #
-        #     i += 1
-        #     result_list.append(result)
-
-        return Response({'data': 'data'})
-
     def post(self, request, *args, **kwargs):
         serializer = website_serializers.ClimateApiSerializer(data=request.data)
         if serializer.is_valid():

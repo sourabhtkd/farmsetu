@@ -3,10 +3,15 @@ import traceback
 import requests
 
 from farmsetu import constants
-from farmsetu.type_class import OrderingType
+from farmsetu.type_class import OrderType
 
 
 class Parser:
+    """
+
+    Parses data based on order type
+
+    """
     __slots__ = ('ordering_type',)
 
     def __init__(self, ordering_type):
@@ -14,6 +19,9 @@ class Parser:
 
     @staticmethod
     def get_parser(ordering_type):
+        """
+        returns parser object
+        """
         return Parser(ordering_type)
 
     def __parse_year_ordered_data(self, data):
@@ -35,6 +43,10 @@ class Parser:
         return result_list
 
     def __parse_rank_ordered_data(self, data):
+        """
+        Parses rank ordered data
+
+        """
         result_list = list()
         row_list = data.splitlines()[5:]
         field_list = row_list.pop(0)
@@ -58,8 +70,8 @@ class Parser:
 
     def parse(self, data):
         func_dict = {
-            OrderingType.YEAR_ORDERED: self.__parse_year_ordered_data,
-            OrderingType.RANKED: self.__parse_rank_ordered_data,
+            OrderType.YEAR_ORDERED: self.__parse_year_ordered_data,
+            OrderType.RANKED: self.__parse_rank_ordered_data,
         }
         callable_func = func_dict[self.ordering_type]
         return callable_func(data)
@@ -73,12 +85,15 @@ class Formatter:
 
     @staticmethod
     def get_formatter(ordering_type):
+        """
+        returns formatter object
+        """
         return Formatter(ordering_type)
 
     def format(self, data):
         func_dict = {
-            OrderingType.YEAR_ORDERED: self.__format_year_ordered_data,
-            OrderingType.RANKED: self.__format_rank_ordered_data,
+            OrderType.YEAR_ORDERED: self.__format_year_ordered_data,
+            OrderType.RANKED: self.__format_rank_ordered_data,
         }
         callable_func = func_dict[self.ordering_type]
         return callable_func(data)
@@ -113,6 +128,10 @@ class Formatter:
         return result
 
     def __format_rank_ordered_data(self, data_list):
+        """
+        formats rank ordered data
+
+        """
         result = dict()
         result['months'] = dict()
         result['seasons'] = dict()
@@ -123,14 +142,27 @@ class Formatter:
                 year = data.pop("year")
                 month = list(data.keys())[0]
                 val = data[month]
+
+                try:
+                    val = float(val)
+                except (ValueError, TypeError) as ex:
+                    val = None
+
                 if month not in result['months']:
                     result['months'][month] = list()
+
                 result['months'][month].append({year:val})
 
             elif any(item in constants.UK_SEASON_CONSTANT_LIST for item in list(data.keys())):
                 year = data.pop("year")
                 season = list(data.keys())[0]
                 val = data[season]
+
+                try:
+                    val = float(val)
+                except (ValueError, TypeError) as ex:
+                    val = None
+
                 if season not in result['seasons']:
                     result['seasons'][season] = list()
                 result['seasons'][season].append({year: val})
@@ -139,6 +171,12 @@ class Formatter:
                 year = data.pop("year")
                 annual = list(data.keys())[0]
                 val = data[annual]
+
+                try:
+                    val = float(val)
+                except (ValueError, TypeError) as ex:
+                    val = None
+
                 if annual not in result[constants.ANNUAL_CONSTANT]:
                     result[constants.ANNUAL_CONSTANT].append({year: val})
                 # row['seasons'][season].append({year: val})
@@ -158,6 +196,13 @@ class ClimateApiUtil:
         self.__base_url = constants.BASE_API_URL
 
     def get_climate_data(self):
+        """
+        Forms url based on parameters and only calls api and returns climate api object.
+
+        on success sets  _data and message and returns climate api object
+        on failure sets errors(traceback for logging) and message then returns climate api object
+
+        """
         try:
             self.__url = constants.API_RESULT_URL_FORMATTED.format(
                 base_api_url=self.__base_url,
@@ -173,10 +218,18 @@ class ClimateApiUtil:
         except requests.exceptions.RequestException as ex:
             self.message = "Error while fetching data from climate api"
             self.errors = traceback.format_exc()
-            return None
+            return self
 
     def is_valid(self):
+        """
+         will return true only if climate data api is fetched successfully.
+         before returning true it will set __parser and parsed data in the
+         current object
+
+        """
         try:
+            if not hasattr(self,'_data'):
+                return False
             self.__parser = Parser.get_parser(self.ordering_type)
             self.parsed_data = self.__parser.parse(self._data)
             return True
@@ -184,6 +237,9 @@ class ClimateApiUtil:
             return False
 
     def get_formatted_data(self):
+        """
+         Gets proper formatter based on order type and formats data
+        """
         if not hasattr(self, 'parsed_data'):
             raise Exception('call is valid before formatting data')
 
