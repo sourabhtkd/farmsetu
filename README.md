@@ -47,7 +47,7 @@ Data
 }
 ```
 Available parameter options
-
+<div style="font-size:10px;">
 | order                |   region                                             |   parameter                |
 | ---------------------| ---------------------------------------------------- |----------------------------|
 | RANKED = 'ranked'    | UK = 'UK'                                            | Tmax = "Tmax"              |
@@ -68,4 +68,4 @@ Available parameter options
 |                      | England_SW_and_S_Wales = 'England_SW_and_S_Wales'    |
 |                      | England_SE_and_Central_S = 'England_SE_and_Central_S'|
 
-
+</div>
