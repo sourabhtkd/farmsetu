@@ -44,12 +44,17 @@
 
 ```
 Running Test Cases
-
+**Only success test cases are implemented due to lack of time**
 ```shell
 ~$ docker-compose -f docker-compose-dev.yml exec web python manage.py test
 ~$ docker-compose -f docker-compose-prod.yml exec web python manage.py test
 ```
 
+##### Documentation url 
+```
+http:localhost:8000/docs
+
+```
 ### API
 
 1. Get Climate Data
