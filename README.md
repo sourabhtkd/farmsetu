@@ -30,11 +30,11 @@
 
 ```shell
 ## for dev docker-compose 
-~$ docker-compose up -f docker-compose-dev.yml up
+~$ docker-compose -f docker-compose-dev.yml up
 ~$ docker-compose -f docker-compose-dev.yml exec web sh
 
 ## for prod docker-compose
-~$ docker-compose up -f docker-compose-prod.yml up
+~$ docker-compose -f docker-compose-prod.yml up
 ~$ docker-compose -f docker-compose-prod.yml exec web sh
 
 # migrate commands are not automated because sometimes you may need to enter default values for existing fields eg:- timezone.now
