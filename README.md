@@ -22,7 +22,7 @@
   postgresql installed in local system and running in default port 5432
 - prod env and dev env are same except DEBUG flag
 
-**Note: Authentication and Authorization was not required as per task hence not implemented
+**Note**: Authentication and Authorization was not required as per task hence not implemented
 
 
 **Steps**
@@ -171,7 +171,7 @@ Running Test Cases
                 "aut": 6.12
             },
        "ann": 5.43
-    },
+    }
     
   }
 }
