@@ -4,6 +4,7 @@ import requests
 from django.shortcuts import render
 
 # Create your views here.
+from rest_framework import status
 from rest_framework.renderers import HTMLFormRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -35,6 +36,6 @@ class MetOfficeView(APIView):
                 response['data'] = formatted_data
                 return Response(response)
             else:
-                return Response({"errors": climate_data.message})
+                return Response({"errors": climate_data.message}, status=status.HTTP_400_BAD_REQUEST)
         else:
-            return Response({'errors': serializer.errors})
+            return Response({'errors': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)

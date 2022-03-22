@@ -76,6 +76,7 @@ Running Test Cases
 
 **Field Level errors**
 
+###### status code =400
 ```json
 {
     "errors": {
@@ -93,12 +94,60 @@ Running Test Cases
 ```
 
 **Top level errors**
+###### status_code = 400 
 ```json
 {
     "errors": "Error while fetching data from climate api"
 }
 
 
+```
+
+##### Rank Order Response example(truncated)
+
+```json
+{
+  "order": "ranked",
+  "region": "Wales",
+  "parameter": "Tmin",
+  "data": {
+    "months": {
+      "jan": [
+        {
+          "1916": 4.8
+        },
+        {
+          "1921": 4.6
+        }
+      ],
+      "feb": [
+        {
+          "1916": 4.8
+        },
+        {
+          "1921": 4.6
+        }
+      ]
+    },
+     "seasons": {
+            "win": [
+                {
+                    "2016": 3.67
+                }
+            ], 
+            "spr": [
+                {
+                    "2016": 3.67
+                }
+            ]
+     },
+    "ann": [
+            {
+                "2017": 6.54
+            }
+    ]
+  }
+}
 ```
 
 **Available parameter options**
