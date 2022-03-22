@@ -58,7 +58,7 @@ Available parameter options
 |                      | Wales = 'Wales'                                      | Tmean = 'Tmean'            |
 |                      | Scotland = 'Scotland'                                | Sunshine = 'Sunshine'      |
 |                      | Northern_Ireland = 'Northern_Ireland'                | Rainfall = 'Rainfall'      |
-|                      | England_and_Wales = 'England_and_Wales'              | Raindays1mm = 'Raindays1mm'|
+|                      | England_and_Wales = 'England_and_Wales'              | <sub>Raindays1mm = 'Raindays1mm' </sub>|
 |                      | England_N = 'England_N'                              | AirFrost = 'AirFrost'      |
 |                      | England_S = 'England_S'                              |
 |                      | Scotland_N = 'Scotland_N'                            |
