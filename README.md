@@ -38,7 +38,7 @@
    - **Method** = POST
    - **Data** :-
 
-#####Rank ordered
+##### Rank ordered
 
 ```json
 {
