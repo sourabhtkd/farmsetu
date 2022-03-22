@@ -34,10 +34,9 @@
 ### API
 
 1. Get Climate Data
-   - URL = http://localhost:8000/
-   - Method = POST
-
-Data
+   - **URL** = http://localhost:8000/
+   - **Method** = POST
+   - **Data** :-
 
 ```json
 {
@@ -46,6 +45,7 @@ Data
     "parameter":"Tmin"
 }
 ```
+   - **Response **:
 
 Available parameter options
 
